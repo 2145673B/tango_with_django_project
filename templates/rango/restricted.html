@@ -1,0 +1,6 @@
+{% extends 'rango/base.html' %}
+{% block body_block %}
+{% if user.is_authenticated %}
+	You are in this page because you are logged in.
+{% endif %}
+{% endblock %}

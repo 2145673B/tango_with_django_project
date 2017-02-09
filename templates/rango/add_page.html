@@ -3,9 +3,9 @@
 
 {% block title_block %}
 Add a Page
-{% endblock %}
-
-    {% block body_block %}
+{% endblock %}		
+	{% block body_block %}
+	{% if user.is_authenticated %}
 		{% if category %}
 		
         <h1>Add a Page to {{category.name}}</h1>
@@ -25,5 +25,7 @@ Add a Page
 		{% else %}
 			The specified category does not exist!
 		{% endif%}
-		
+	{% else %}
+		You are not authenticated, please login!
+	{% endif %}
     {% endblock %}

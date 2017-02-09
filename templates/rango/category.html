@@ -21,9 +21,11 @@
         {% endif %}
 	<hr />
 	<div>
+		{% if user.is_authenticated %}
 		<ul>
 			<li><a href="{% url 'add_page' category.slug %}">Add a Page</a></li>
 		</ul>
+		{% endif %}
 	</div>	
 	{% else %}
         The specified category does not exist!
